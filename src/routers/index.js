@@ -1,7 +1,9 @@
 const Router = require('koa-router')
 const { login, testpost } = require('../controller')
 
-const router = new Router()
+const router = new Router({
+  prefix: '/levi',
+})
 
 module.exports = (app) => {
   router.get('/testget', login, async (ctx, next) => {
