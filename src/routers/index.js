@@ -4,7 +4,10 @@ const { login, testpost } = require('../controller')
 const router = new Router()
 
 module.exports = (app) => {
-  router.get('/testget', login)
+  router.get('/testget', login, async (ctx, next) => {
+    console.log(ctx.tagName)
+    await next()
+  })
   router.post('/testpost', testpost)
 
   app.use(router.routes()).use(router.allowedMethods())

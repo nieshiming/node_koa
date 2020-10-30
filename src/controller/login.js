@@ -11,5 +11,8 @@ module.exports = {
     ctx.response.type = 'text/plain; charset=utf-8'
 
     ctx.cookies.set('nsm', 'bbbb', {})
+    ctx.tagName = 'nnssmm'
+
+    await next()
   },
 }
