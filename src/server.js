@@ -16,7 +16,7 @@ app.on('error', (err) => {
 
 /** await 中间件执行顺序, 如果上一个中间件没有 加 await next() 那么中间件就不会执行 */
 app.use(async (ctx, next) => {
-  console.log('app use next start1');
+  console.log('app use next start');
   await next();
 });
 
