@@ -1,1 +1,1 @@
-console.log('存放资源相关')
+console.log('存放资源相关');

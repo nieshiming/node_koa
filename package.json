@@ -5,7 +5,9 @@
   "main": "./src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon ./src/server.js localhost 8888"
+    "start": "nodemon ./src/server.js localhost 8888",
+    "pretty": "prettier --write  \"src/**/*.js\""
+
   },
   "husky": {
     "hooks": {

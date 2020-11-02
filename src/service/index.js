@@ -1,11 +1,11 @@
 module.exports = {
   getLoginUserInfo: async (userId) => {
-    if (!userId) return ''
+    if (!userId) return '';
 
     return await new Promise((resove) =>
       setTimeout(() => {
-        resove('levis')
-      }, 3000)
-    )
+        resove('levis');
+      }, 3000),
+    );
   },
-}
+};
