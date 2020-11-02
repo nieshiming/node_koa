@@ -2,7 +2,7 @@ module.exports = {
   login: async (ctx, next) => {
     ctx.body = {
       code: 200,
-      data: 'levis get data',
+      data: 'levis test nodemon get data',
       params: ctx.query.name,
       resultMessage: ctx.protocol,
     }

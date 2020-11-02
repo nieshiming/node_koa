@@ -7,7 +7,7 @@ const router = new Router({
 
 module.exports = (app) => {
   router.get('/testget', login, async (ctx, next) => {
-    console.log(ctx.tagName)
+    // console.log(ctx.tagName)
     await next()
   })
   router.post('/testpost', testpost)
