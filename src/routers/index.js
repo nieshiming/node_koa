@@ -12,6 +12,11 @@ module.exports = (app) => {
   })
   router.post('/testpost', testpost)
   router.get('/getJson', getJson)
+  router.get('/404', async (ctx, next) => {
+    ctx.body = ''
+    ctx.response.status = 404
+    await next()
+  })
 
   app.use(router.routes()).use(router.allowedMethods())
 
