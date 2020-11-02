@@ -16,7 +16,7 @@
   },
   "lint-staged": {
     "src/**/*": [
-      "prettier --write --ignore-unknown",
+      "yarn pretty",
       "git add"
     ]
   },
