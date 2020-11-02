@@ -1,8 +1,3 @@
-const json = {
-  name: 'levi',
-  age: 200,
-}
-
 module.exports = {
   testpost: async (ctx, next) => {
     ctx.body = {
@@ -12,6 +7,6 @@ module.exports = {
     }
   },
   getJson: async (ctx, next) => {
-    ctx.sendJson({ name: 'dabao', age: 20 })
+    ctx.sendJson(200, { name: 'dabao', age: 20 })
   },
 }

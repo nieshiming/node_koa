@@ -1,9 +1,9 @@
 module.exports = () => {
-  function toJson(json) {
+  function toJson(code, data) {
     this.set('content-type', 'application/jso ')
     this.body = JSON.stringify({
-      code: 200,
-      data: json,
+      code,
+      data,
     })
   }
   return async function (ctx, next) {
