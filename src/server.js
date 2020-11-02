@@ -14,4 +14,9 @@ app.on('error', (err) => {
   console.log(err)
 })
 
+/** await 中间件执行顺序, 如果上一个中间件没有 加 await next() 那么中间件就不会执行 */
+app.use(async (ctx, next) => {
+  console.log(1111)
+})
+
 app.listen(8888, () => console.log('server is start'))

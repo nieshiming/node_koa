@@ -8,5 +8,6 @@ module.exports = {
   },
   getJson: async (ctx, next) => {
     ctx.sendJson(200, { name: 'dabao', age: 20 })
+    await next()
   },
 }
