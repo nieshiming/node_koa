@@ -1,8 +1,8 @@
 import * as Koa from 'koa';
 import * as bodyParser from 'koa-bodyparser';
 
-import router from './routers';
-import middleware from './middleware';
+import router from '@/routers';
+import middleware from '@/middleware';
 
 const app = new Koa();
 

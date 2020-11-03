@@ -1,5 +1,5 @@
 import * as log4js from 'log4js';
-import { TCtx, TNext } from '../common/interface/type';
+import { TCtx, TNext } from '@/common/interface/type';
 
 export default () => async (ctx: TCtx, next: TNext) => {
   const start = Date.now();

@@ -1,4 +1,4 @@
-import { TCtx, TNext } from '../common/interface/type';
+import { TCtx, TNext } from '@/common/interface/type';
 
 export default () => {
   return async function (ctx: TCtx, next: TNext) {
