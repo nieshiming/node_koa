@@ -1,11 +1,11 @@
-const Router = require('koa-router');
-const { login, testpost, getJson } = require('../controller');
+import * as Router from 'koa-router';
+import { login, testpost, getJson } from '../controller';
 
 const router = new Router({
   prefix: '/levi',
 });
 
-module.exports = (app) => {
+export default (app) => {
   router.get('/testget', login, async (ctx, next) => {
     // console.log(ctx.tagName)
     await next();
@@ -19,6 +19,4 @@ module.exports = (app) => {
   });
 
   app.use(router.routes()).use(router.allowedMethods());
-
-  return router;
 };

@@ -1,4 +1,4 @@
-module.exports = () => {
+export default () => {
   function toJson(code, data) {
     this.set('content-type', 'application/json');
     this.body = JSON.stringify({

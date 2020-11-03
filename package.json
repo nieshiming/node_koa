@@ -2,11 +2,11 @@
   "name": "node_koa",
   "version": "1.0.0",
   "description": "",
-  "main": "./src/server.js",
+  "main": "./src/index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon ./src/server.js localhost 8888",
-    "pretty": "prettier --write  \"src/**/*.js\""
+    "start": "nodemon ./src/server.ts localhost 8888",
+    "pretty": "prettier --write  \"src/**/*.ts\""
   },
   "husky": {
     "hooks": {
@@ -32,11 +32,17 @@
     "koa": "^2.13.0",
     "koa-bodyparser": "^4.3.0",
     "koa-router": "^9.4.0",
-    "log4js": "^6.3.0"
+    "log4js": "^6.3.0",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.5"
   },
   "devDependencies": {
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
+    "@types/koa": "^2.11.6",
+    "@types/koa-bodyparser": "^4.3.0",
+    "@types/koa-router": "^7.4.1",
+    "@types/node": "^14.14.6",
     "eslint": "^7.12.1",
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-plugin-import": "^2.22.1",
@@ -44,8 +50,6 @@
     "lint-staged": "^10.5.1",
     "nodemon": "^2.0.6",
     "prettier": "^2.1.2",
-    "pretty-quick": "^3.1.0",
-    "ts-node": "^9.0.0",
-    "typescript": "^4.0.5"
+    "pretty-quick": "^3.1.0"
   }
 }

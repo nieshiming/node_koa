@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   getLoginUserInfo: async (userId) => {
     if (!userId) return '';
 

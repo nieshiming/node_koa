@@ -1,13 +1,15 @@
-const Koa = require('koa');
-const bodyParser = require('koa-bodyparser');
-const router = require('./routers');
-const middleware = require('./middleware');
+import * as Koa from 'koa';
+import * as bodyParser from 'koa-bodyparser';
+
+import router from './routers';
+import middleware from './middleware';
 
 const app = new Koa();
 
 /** 保证middleware 在router之前加载，因为 app.use有注册顺序，先注册先执行 */
 middleware(app);
 router(app);
+console.log(router);
 app.use(bodyParser());
 
 app.on('error', (err) => {

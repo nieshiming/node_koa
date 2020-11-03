@@ -1,6 +1,6 @@
-const log4js = require('log4js');
+import * as log4js from 'log4js';
 
-module.exports = () => async (ctx, next) => {
+export default () => async (ctx, next) => {
   const start = Date.now();
   /** 这里会生成cheese.log文件 */
   log4js.configure({

@@ -10,7 +10,7 @@
       "request": "launch",
       "restart": true,
       "runtimeArgs": ["-r", "ts-node/register"],
-      "program": "${workspaceFolder}/src/server.js"
+      "program": "${workspaceFolder}/src/server.ts"
     }
   ]
 }
