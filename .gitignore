@@ -1,5 +1,7 @@
 node_modules
 
+dist
+
 cheese.log
 
 yarn-error
