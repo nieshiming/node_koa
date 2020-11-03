@@ -4,7 +4,7 @@ export default {
 
     return await new Promise((resove) =>
       setTimeout(() => {
-        resove('levis1');
+        resove('levis');
       }, 3000),
     );
   },
