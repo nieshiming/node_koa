@@ -4,10 +4,10 @@ kos 中间件 类似洋葱原理，一层层执行， 从外到里，然后在�
 
 #### MVC
 
-- controller 控制业务逻辑
-- service 控制数据交互
-- middleware 引入常用中间件 或者 公共方法
 - router 路由
+- service 控制数据交互
+- controller 控制业务逻辑
+- middleware 引入常用中间件 或者 公共方法
 
 #### 功能点
 
