@@ -7,6 +7,7 @@ kos 中间件 类似洋葱原理，一层层执行， 从外到里，然后在�
 - controller 控制业务逻辑
 - service 控制数据交互
 - middleware 引入常用中间件 或者 公共方法
+- router 路由
 
 #### 功能点
 
@@ -16,7 +17,7 @@ kos 中间件 类似洋葱原理，一层层执行， 从外到里，然后在�
 - [x] git husky
 - [ ] eslint + babel
 - [ ] mysql || mongodb
-- [ ] wbepack + 打包优化
+- [ ] wbepack5 + 打包优化
 - [ ] 环境隔离
 - [ ] 部署阿里云
 
