@@ -1,9 +1,11 @@
 export const getLoginUserInfo = async (userId: number) => {
   if (!userId) return '';
 
-  return await new Promise((resove) =>
+  return new Promise((resolve) => {
     setTimeout(() => {
-      resove('levis nsm');
-    }, 3000),
-  );
+      resolve('levis nsm');
+    }, 3000);
+  });
 };
+
+export const demo = () => console.log(1);

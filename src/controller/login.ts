@@ -1,5 +1,5 @@
-import { TCtx, TNext } from '../common/interface/type';
-import { getLoginUserInfo } from '../service';
+import { TCtx, TNext } from '@/common/interface/type';
+import { getLoginUserInfo } from '@/service';
 
 export const login = async (ctx: TCtx, next: TNext) => {
   ctx.body = {
@@ -19,4 +19,8 @@ export const login = async (ctx: TCtx, next: TNext) => {
   console.log(res);
 
   await next();
+};
+
+export const demos = () => {
+  console.log(1);
 };
