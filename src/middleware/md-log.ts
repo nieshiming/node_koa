@@ -1,6 +1,7 @@
 import * as log4js from 'log4js';
+import { TCtx, TNext } from '../common/interface/type';
 
-export default () => async (ctx, next) => {
+export default () => async (ctx: TCtx, next: TNext) => {
   const start = Date.now();
   /** 这里会生成cheese.log文件 */
   log4js.configure({

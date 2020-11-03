@@ -1,11 +1,12 @@
 import * as Router from 'koa-router';
+import { TKoa } from '../common/interface/type';
 import { login, testpost, getJson } from '../controller';
 
 const router = new Router({
   prefix: '/levi',
 });
 
-export default (app) => {
+export default (app: TKoa) => {
   router.get('/testget', login, async (ctx, next) => {
     // console.log(ctx.tagName)
     await next();

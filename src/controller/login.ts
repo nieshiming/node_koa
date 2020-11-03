@@ -1,4 +1,7 @@
-export const login = async (ctx, next) => {
+import { TCtx, TNext } from '../common/interface/type';
+import { getLoginUserInfo } from '../service';
+
+export const login = async (ctx: TCtx, next: TNext) => {
   ctx.body = {
     code: 200,
     data: 'levis test nodemon get data',
@@ -6,11 +9,14 @@ export const login = async (ctx, next) => {
     resultMessage: ctx.protocol,
   };
 
-  ctx.response.lastModified = '2022-10-22';
+  ctx.response.lastModified = new Date();
   ctx.response.type = 'text/plain; charset=utf-8';
 
   ctx.cookies.set('nsm', 'bbbb', {});
   ctx.tagName = 'nnssmm';
+
+  const res = await getLoginUserInfo(1); // 获取用户信息
+  console.log(res);
 
   await next();
 };

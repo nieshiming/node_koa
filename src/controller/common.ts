@@ -1,4 +1,6 @@
-export const testpost = async (ctx) => {
+import { TCtx, TNext } from '../common/interface/type';
+
+export const testpost = async (ctx: TCtx) => {
   ctx.body = {
     code: 200,
     data: 'nsm post data',
@@ -6,7 +8,7 @@ export const testpost = async (ctx) => {
   };
 };
 
-export const getJson = async (ctx, next) => {
+export const getJson = async (ctx: TCtx, next: TNext) => {
   ctx.sendJson(200, { name: 'dabao', age: 20 });
   await next();
 };

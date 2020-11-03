@@ -1,5 +1,7 @@
+import { TCtx, TNext } from '../common/interface/type';
+
 export default () => {
-  return async (ctx, next) => {
+  return async (ctx: TCtx, next: TNext) => {
     try {
       await next();
       if (ctx.response.status === 404 && !ctx.response.body) {
