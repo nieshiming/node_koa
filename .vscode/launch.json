@@ -9,8 +9,18 @@
       "type": "node",
       "request": "launch",
       "restart": true,
-      "runtimeArgs": ["-r", "ts-node/register"],
-      "program": "${workspaceFolder}/src/server.ts"
+      "sourceMaps": true,
+      "runtimeArgs": [
+        "-r",
+        "${workspaceFolder}/node_modules/ts-node/register",
+        "-r",
+        "${workspaceFolder}/node_modules/tsconfig-paths/register"
+      ],
+      "program": "${workspaceFolder}/src/server.ts",
+      "resolveSourceMapLocations": [
+        "${workspaceFolder}/**",
+        "!**/node_modules/**"
+      ],
     }
   ]
 }
