@@ -4,8 +4,6 @@ import * as bodyParser from 'koa-bodyparser';
 import router from '@/routers';
 import middleware from '@/middleware';
 
-const a = 1;
-
 const app = new Koa();
 
 /** 保证middleware 在router之前加载，因为 app.use有注册顺序，先注册先执行 */
