@@ -12,7 +12,7 @@ router(app);
 app.use(bodyParser());
 
 app.on('error', (err) => {
-  console.log(err);
+  console.log(err, 'error');
 });
 
 /** await 中间件执行顺序, 如果上一个中间件没有 加 await next() 那么中间件就不会执行 */
