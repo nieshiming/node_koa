@@ -2,9 +2,11 @@ import { TCtx, TNext } from '@/common/interface/type';
 import { getLoginUserInfo } from '@/service';
 
 export const login = async (ctx: TCtx, next: TNext) => {
+  const res = await getLoginUserInfo(1); // 获取用户信息
+
   ctx.body = {
     code: 200,
-    data: 'levis test nodemon get data',
+    data: JSON.stringify(res),
     params: ctx.query.name,
     resultMessage: ctx.protocol,
   };
@@ -14,9 +16,6 @@ export const login = async (ctx: TCtx, next: TNext) => {
 
   ctx.cookies.set('nsm', 'bbbb', {});
   ctx.tagName = 'nnssmm';
-
-  const res = await getLoginUserInfo(1); // 获取用户信息
-  console.log(res);
 
   await next();
 };
