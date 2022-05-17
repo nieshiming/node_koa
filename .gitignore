@@ -4,4 +4,6 @@ dist
 
 cheese.log
 
-yarn-error
+yarn-error.log
+
+package-lock.json

@@ -1,8 +1,9 @@
-import * as Koa from 'koa';
-import * as bodyParser from 'koa-bodyparser';
+import Koa from 'koa';
+import chalk from 'chalk';
+import bodyParser from 'koa-bodyparser';
 
-import router from '@/routers';
-import middleware from '@/middleware';
+import router from './routers';
+import middleware from './middleware';
 
 const app = new Koa();
 
@@ -11,14 +12,16 @@ middleware(app);
 router(app);
 app.use(bodyParser());
 
-app.on('error', (err) => {
-  console.log(err, 'error');
-});
-
 /** await 中间件执行顺序, 如果上一个中间件没有 加 await next() 那么中间件就不会执行 */
 app.use(async (ctx, next) => {
   console.log('app use next start');
   await next();
 });
 
-app.listen(8000, () => console.log('server is start'));
+app.on('error', (err) => {
+  console.log(err, 'error');
+});
+
+app.listen(8000, () => {
+  console.log(`server is start at:  http: ${chalk.underline('127.0.0.1: 8000')}`);
+});

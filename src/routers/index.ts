@@ -1,9 +1,9 @@
-import * as Router from 'koa-router';
-import { TKoa } from '@/common/interface/type';
-import { login, testpost, getJson } from '@/controller';
+import Router from 'koa-router';
+import { TKoa } from '../common/interface/type';
+import { login, testpost, getJson } from '../controller';
 
 const router = new Router({
-  // prefix: '/levi',
+  // prefix: '/levi'
 });
 
 export default (app: TKoa) => {
