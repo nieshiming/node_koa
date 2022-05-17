@@ -13,13 +13,14 @@
     "watch": [
       "src"
     ],
-    "exec": "node --experimental-specifier-resolution=node --loader ts-node/esm -r tsconfig-paths/register",
+    "exec": "node --experimental-specifier-resolution=node --loader ts-node/esm -r tsconfig-paths/register; yarn prettier",
     "ext": "ts, js"
   },
   "scripts": {
+    "clean": "rm -rf dist",
     "start": "nodemon ./src/server.ts",
-    "build": "rm -rf dist; tsc",
-    "pretty": "prettier --write  \"src/**/*.{js,ts}\""
+    "build": "yarn clean; ncc build ./src/server.ts -o dist -s",
+    "prettier": "prettier -w src/**"
   },
   "husky": {
     "hooks": {
@@ -29,7 +30,7 @@
   },
   "lint-staged": {
     "src/**/*": [
-      "yarn pretty",
+      "yarn prettier",
       "git add "
     ]
   },
