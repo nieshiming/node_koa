@@ -8,7 +8,7 @@ export default () => async (ctx: TCtx, next: TNext) => {
     }
   } catch (err) {
     console.log(err);
-    const status = err || 400;
+    const status = err.status || 400;
     switch (status) {
       case 404:
         ctx.body = '404 error';

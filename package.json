@@ -1,8 +1,7 @@
 {
   "name": "node_koa",
   "version": "1.0.0",
-  "description": "",
-  "type": "module",
+  "description": "node application",
   "main": "dist/index.js",
   "nodemonConfig": {
     "ignore": [
@@ -14,7 +13,7 @@
     "watch": [
       "src"
     ],
-    "exec": "node --experimental-specifier-resolution=node --loader ts-node/esm  -r tsconfig-paths/register ",
+    "exec": "node --experimental-specifier-resolution=node --loader ts-node/esm -r tsconfig-paths/register",
     "ext": "ts, js"
   },
   "scripts": {
@@ -43,7 +42,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "chalk": "^5.0.1",
+    "chalk": "4.1.2",
     "cross-env": "^7.0.2",
     "koa": "^2.13.0",
     "koa-bodyparser": "^4.3.0",

@@ -2,8 +2,8 @@ import Koa from 'koa';
 import chalk from 'chalk';
 import bodyParser from 'koa-bodyparser';
 
-import router from './routers';
-import middleware from './middleware';
+import router from '@/routers';
+import middleware from '@/middleware';
 
 const app = new Koa();
 
@@ -23,5 +23,5 @@ app.on('error', (err) => {
 });
 
 app.listen(8000, () => {
-  console.log(`server is start at:  http: ${chalk.underline('127.0.0.1: 8000')}`);
+  console.log(`server start at: ${chalk.underline(chalk.blue('http://127.0.0.1:8000'))}`);
 });
