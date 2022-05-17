@@ -6,7 +6,7 @@ export default () => async (ctx: TCtx, next: TNext) => {
     if (ctx.response.status === 404 && !ctx.response.body) {
       ctx.throw(404, 'http 404 error');
     }
-  } catch (err) {
+  } catch (err: any) {
     console.log(err);
     const status = err.status || 400;
     switch (status) {
