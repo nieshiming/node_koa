@@ -30,8 +30,8 @@
     }
   },
   "lint-staged": {
-    "**/*": "yarn prettier",
     "src/**/*.ts": [
+      "yarn prettier",
       "yarn lint",
       "git add "
     ]
