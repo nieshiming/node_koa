@@ -12,14 +12,13 @@ kos 中间件 类似洋葱原理，一层层执行， 从外到里，然后在�
 #### 功能点
 
 - [x] typescript + node
-- [x] koa koa-router
+- [x] koa +  koa-router
 - [x] prettier
 - [x] git husky
-- [ ] eslint + babel
-- [ ] mysql || mongodb
-- [ ] wbepack5 + 打包优化
-- [ ] 环境隔离
-- [ ] 部署阿里云
+- [x] eslint + typescript/parse
+- [x] mysql
+- [x] 环境隔离
+- [ ] 部署腾讯云
 
 #### 源码
 
