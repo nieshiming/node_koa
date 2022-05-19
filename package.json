@@ -13,15 +13,15 @@
     "watch": [
       "src"
     ],
-    "exec": "node --experimental-specifier-resolution=node --loader ts-node/esm -r tsconfig-paths/register",
+    "exec": "yarn lint --fix && node --experimental-specifier-resolution=node --loader ts-node/esm -r tsconfig-paths/register ",
     "ext": "ts, js"
   },
   "scripts": {
     "clean": "rm -rf dist",
-    "start": "nodemon ./src/server.ts",
+    "start": " nodemon ./src/server.ts",
     "build": "yarn clean; ncc build ./src/server.ts -o dist -s",
-    "prettier": "prettier -w src/**",
-    "lint": "eslint --fix 'src/**/*.ts'"
+    "lint": "eslint 'src/**/*.ts'",
+    "prettier": "prettier -w src/**"
   },
   "husky": {
     "hooks": {
