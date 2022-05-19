@@ -30,9 +30,9 @@
     }
   },
   "lint-staged": {
+    "src/**/*": "prettier -w",
     "src/**/*.ts": [
-      "yarn prettier",
-      "yarn lint",
+      "eslint --max-warnings 0",
       "git add "
     ]
   },
